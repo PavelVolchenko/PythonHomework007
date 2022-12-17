@@ -5,9 +5,7 @@
     обработчик в Контроллере. Этот обработчик выполнит соответствующие манипуляции над моделью,
     и в случае необходимости сообщит Представлению о наличии изменений.                           """
 
-from model import read_db
 from model import show_guide
-# from model import format_data
 from view import show_menu as ui
 from model import json_export
 from model import csv_export
@@ -20,8 +18,6 @@ def controller(data):
     position = -1
     while position != 9:
         position = ui()
-        # file = read_db()
-        # data = file
         match position:
             case 1:
                 show_guide(data)
